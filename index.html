@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Video Display</title>
+    <style>
+        video {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+        }
+
+        .grid-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Traffic Video Display</h1>
+
+    <div class="grid-container">
+        <div class="grid-item">
+            <h2>Lane 1 (Final 1)</h2>
+            <video autoplay muted loop>
+                <source src="{{ url_for('static', filename='final1_encoded.mp4') }}" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="grid-item">
+            <h2>Lane 2 (Final 2)</h2>
+            <video autoplay muted loop>
+                <source src="{{ url_for('static', filename='final2_encoded.mp4') }}" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="grid-item">
+            <h2>Lane 3 (Final 3)</h2>
+            <video autoplay muted loop>
+                <source src="{{ url_for('static', filename='final3_encoded.mp4') }}" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="grid-item">
+            <h2>Lane 4 (Final 4)</h2>
+            <video autoplay muted loop>
+                <source src="{{ url_for('static', filename='final4_encoded.mp4') }}" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="grid-item">
+            <h2>Lane 5 (Final 5)</h2>
+            <video autoplay muted loop>
+                <source src="{{ url_for('static', filename='final5_encoded.mp4') }}" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="grid-item">
+            <h2>Ambulance</h2>
+            <video autoplay muted loop>
+                <source src="{{ url_for('static', filename='output_ambulance_reencoded.mp4') }}" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+</body>
+
+</html>
